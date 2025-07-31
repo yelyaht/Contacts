@@ -1,23 +1,22 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f8fc;
+  background-color: #eef4ff;
   color: #333;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
 table {
   margin: 20px auto;
   border-collapse: collapse;
   width: 300px;
+  background-color: #fff;
 }
 
 td {
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   padding: 10px;
-  text-align: center;
   font-weight: bold;
-  background-color: #fff;
 }
 
 strong {
