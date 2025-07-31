@@ -1,17 +1,17 @@
 // Create the contacts array
 const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
 
-// Create and populate the table
+// Build the table
 let table = document.getElementById("contactTable");
 
-// Add table header row
+// Add table headers
 let headerRow = table.insertRow();
-let header1 = headerRow.insertCell();
-header1.innerHTML = "<strong>Slot #</strong>";
-let header2 = headerRow.insertCell();
-header2.innerHTML = "<strong>Number</strong>";
+let cell1 = headerRow.insertCell();
+let cell2 = headerRow.insertCell();
+cell1.innerHTML = "<strong>Slot #</strong>";
+cell2.innerHTML = "<strong>Number</strong>";
 
-// Add the contact rows
+// Add one row per contact
 for (let i = 0; i < contacts.length; i++) {
   let row = table.insertRow();
   let cell1 = row.insertCell();
@@ -20,7 +20,7 @@ for (let i = 0; i < contacts.length; i++) {
   cell2.textContent = contacts[i];
 }
 
-// Prompt loop
+// Prompt the user
 let keepGoing = true;
 
 while (keepGoing) {
