@@ -7,14 +7,24 @@ body {
 }
 
 table {
-  margin: 20px auto;
   border-collapse: collapse;
-  width: 300px;
+  margin: 20px auto;
   background-color: #fff;
+  width: 300px;
+  box-shadow: 0 0 0 2px black; /* Outer border */
 }
 
 td {
-  border: 1px solid #aaa;
+  border: 2px solid black; /* Thick cell borders like ASCII art */
   padding: 10px;
+  text-align: center;
   font-weight: bold;
+}
+
+th {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
 }
