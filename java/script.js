@@ -1,31 +1,39 @@
-// Step 1: Set up the contacts array
+// Create the contacts array
 const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
 
-// Step 2: Display the contact list
-let listHTML = "<p><strong>Slot # &nbsp;&nbsp; Name</strong></p>";
-for (let i = 0; i < contacts.length; i++) {
-  listHTML += `<div class="slot-row">${i} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${contacts[i]}</div>`;
-}
-document.getElementById("contactList").innerHTML = listHTML;
+// Create and populate the table
+let table = document.getElementById("contactTable");
 
-// Step 3: Start interaction loop
+// Add table header row
+let headerRow = table.insertRow();
+let header1 = headerRow.insertCell();
+header1.innerHTML = "<strong>Slot #</strong>";
+let header2 = headerRow.insertCell();
+header2.innerHTML = "<strong>Number</strong>";
+
+// Add the contact rows
+for (let i = 0; i < contacts.length; i++) {
+  let row = table.insertRow();
+  let cell1 = row.insertCell();
+  let cell2 = row.insertCell();
+  cell1.textContent = i;
+  cell2.textContent = contacts[i];
+}
+
+// Prompt loop
 let keepGoing = true;
 
 while (keepGoing) {
-  let slotInput = prompt("Enter the Slot Number of the contact you'd like to view (0–5):");
+  let input = prompt("Enter the Slot Number of the contact you'd like to view (0–5):");
+  let slot = parseInt(input);
 
-  // Convert input to number
-  let slotNumber = parseInt(slotInput);
-
-  // Check if slot number is valid
-  if (slotNumber >= 0 && slotNumber < contacts.length) {
-    alert("You selected " + contacts[slotNumber] + ".");
+  if (slot >= 0 && slot < contacts.length) {
+    alert("You selected " + contacts[slot] + ".");
   } else {
     alert("That name is not found. Please try again.");
-    continue; // Skip to the next loop
+    continue;
   }
 
-  // Ask if they want to search again
   let again = prompt("Would you like to select another name? (yes or no)");
   if (again.toLowerCase() !== "yes") {
     keepGoing = false;
