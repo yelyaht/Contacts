@@ -5,9 +5,9 @@ const contacts = ["Arnold", "Sly", "Dwayne", "Vin", "JCVD", "Steven"];
 let table = document.getElementById("contactTable");
 
 // Add table headers
-let headerRow = table.insertRow();
-let cell1 = headerRow.insertCell();
-let cell2 = headerRow.insertCell();
+let header = table.insertRow();
+let cell1 = header.insertCell();  
+let cell2 = header.insertCell();
 cell1.innerHTML = "<strong>Slot #</strong>";
 cell2.innerHTML = "<strong>Number</strong>";
 
